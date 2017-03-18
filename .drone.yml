@@ -1,0 +1,19 @@
+workspace:
+  base: /go
+  path: src/github.com/EVE-Tools/order-server
+
+pipeline:
+  build:
+    image: golang:alpine
+    commands:
+      - apk update
+      - apk add git
+      - go get ./...
+      - go build
+
+  docker:
+    image: plugins/docker
+    repo: evetools/order-server
+    tag:
+      - latest
+      - ${DRONE_BRANCH}
