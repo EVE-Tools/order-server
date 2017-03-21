@@ -6,8 +6,6 @@ import (
 
 	"database/sql"
 
-	_ "net/http/pprof"
-
 	"github.com/Sirupsen/logrus"
 	"github.com/buger/jsonparser"
 	"github.com/gin-contrib/cors"
