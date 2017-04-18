@@ -251,8 +251,10 @@ func concatRowsToJSON(rows *sql.Rows) ([]byte, error) {
 			return nil, err
 		}
 
-		response = append(response, orders[1:len(orders)-1]...)
-		response = append(response, ","...)
+		if len(orders) > 0 {
+			response = append(response, orders[1:len(orders)-1]...)
+			response = append(response, ","...)
+		}
 	}
 
 	if len(response) > 1 {
