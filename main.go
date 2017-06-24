@@ -14,9 +14,9 @@ import (
 	"github.com/golang/snappy"
 	"github.com/kelseyhightower/envconfig"
 	_ "github.com/lib/pq"
-	_ "github.com/mattes/migrate/driver/postgres"
-	"github.com/mattes/migrate/migrate"
 	nsq "github.com/nsqio/go-nsq"
+	_ "gopkg.in/mattes/migrate.v1/driver/postgres"
+	"gopkg.in/mattes/migrate.v1/migrate"
 )
 
 // Config holds the application's configuration info from the environment.
