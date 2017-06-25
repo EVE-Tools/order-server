@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"runtime"
 	"time"
 
@@ -251,7 +252,8 @@ func concatRowsToJSON(rows *sql.Rows) ([]byte, error) {
 			return nil, err
 		}
 
-		if len(orders) > 0 {
+		// Skip empty rowsets
+		if !bytes.Equal(orders, []byte("null")) {
 			response = append(response, orders[1:len(orders)-1]...)
 			response = append(response, ","...)
 		}
