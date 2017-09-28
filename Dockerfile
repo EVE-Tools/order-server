@@ -1,6 +1,4 @@
-FROM alpine:latest
-
-MAINTAINER zweizeichen@element-43.com
+FROM alpine:3.6
 
 #
 # Copy release to container and set command
