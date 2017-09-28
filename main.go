@@ -7,7 +7,6 @@ import (
 
 	"database/sql"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/buger/jsonparser"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/contrib/ginrus"
@@ -16,6 +15,7 @@ import (
 	"github.com/kelseyhightower/envconfig"
 	_ "github.com/lib/pq"
 	nsq "github.com/nsqio/go-nsq"
+	"github.com/sirupsen/logrus"
 	_ "gopkg.in/mattes/migrate.v1/driver/postgres"
 	"gopkg.in/mattes/migrate.v1/migrate"
 )
