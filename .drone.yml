@@ -14,6 +14,7 @@ pipeline:
   docker:
     image: plugins/docker
     repo: evetools/order-server
+    secrets: [ docker_username, docker_password ]
     tag:
       - latest
       - ${DRONE_BRANCH}
